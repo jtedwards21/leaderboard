@@ -43,15 +43,9 @@ var Scoreboard = React.createClass({
 
     return (
       <div>
-      <SortButton toggle={this.toggleSort.bind(this)}/>
       <table className="table table-hover">
         <thead>
-	  <tr>
-	    <th>#</th>
-	    <th>Name</th>
-	    <th>Recent Score</th>
-	    <th>Total Score</th>
-	  </tr>
+	　　　　<Header toggle={this.toggleSort.bind(this)} />
 	</thead>
         <tbody>
         {campers}
@@ -63,18 +57,22 @@ var Scoreboard = React.createClass({
   }
 });
 
-var SortButton = React.createClass({
-  toggle(){
+var Header = React.createClass({
+　　toggle(){
     this.props.toggle();
   },
   render(){
 　　　　return (
-      <div onClick={this.toggle} className="btn btn-large btn-default">
-	Sort
-      </div>
+	  <tr>
+	    <th>#</th>
+	    <th>Name</th>
+	    <th　onClick={this.toggle}>Recent Score</th>
+	    <th　onClick={this.toggle}>Total Score</th>
+	  </tr>
     )
   }
 })
+
 
 var Camper = React.createClass({
   
