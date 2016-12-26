@@ -42,8 +42,9 @@ var Scoreboard = React.createClass({
 })
 
     return (
-      <div>
-      <table className="table table-hover">
+      <div　className="row">
+      <div className="title">Free Code Camp Leaderboard</div>
+      <table id="leaderboard" className="table table-hover">
         <thead>
 	　　　　<Header toggle={this.toggleSort.bind(this)} />
 	</thead>
